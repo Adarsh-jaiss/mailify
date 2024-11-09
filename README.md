@@ -62,4 +62,4 @@ fmt.Println("Mail servers:", mailServers)
 ```
 
 ### Example
-Here is a complete example demonstrating how to use the package : [check examples]()
+Here is a complete example demonstrating how to use the package : [check examples](https://github.com/Adarsh-jaiss/mailify/blob/main/cmd/mailify/main.go)
