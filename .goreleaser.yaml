@@ -87,18 +87,10 @@ brews:
     test: |
       system "#{bin}/mailify --version"
 
-# Scoop manifest configuration
-scoops:
-  - repository:
-      owner: adarsh-jaiss
-      name: scoop-bucket
-      token: "{{ .Env.SCOOP_BUCKET_GITHUB_TOKEN }}"
-  
-    homepage: "https://github.com/adarsh-jaiss/mailify"
-    description: "A CLI tool for email validation and server information"
-    license: MIT
-
-    # Persist data between runs
-    persist:
-      - "data"
-      - "config.yml"
+      rigs:
+        - uri: https://raw.githubusercontent.com/adarsh-jaiss/mailify/main/install.sh
+          rig:
+            owner: adarsh-jaiss
+            name: mailify
+          homepage: "https://github.com/adarsh-jaiss/mailify"
+          description: "A CLI tool for email validation and server information"
