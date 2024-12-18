@@ -61,3 +61,44 @@ changelog:
 
 checksum:
   name_template: 'checksums.txt'
+
+# New sections for CLI distribution
+
+# Homebrew tap
+brews:
+  - repository:
+      owner: adarsh-jaiss
+      name: homebrew-tap
+      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
+    
+    # Git author used to commit to the repository
+    commit_author:
+      name: goreleaserbot
+      email: bot@goreleaser.com
+    
+    homepage: "https://github.com/adarsh-jaiss/mailify"
+    description: "A CLI tool for email validation and server information"
+    
+    # Installation instructions
+    install: |
+      bin.install "mailify"
+    
+    # Custom test instruction
+    test: |
+      system "#{bin}/mailify --version"
+
+# Scoop manifest configuration
+scoops:
+  - repository:
+      owner: adarsh-jaiss
+      name: scoop-bucket
+      token: "{{ .Env.SCOOP_BUCKET_GITHUB_TOKEN }}"
+  
+    homepage: "https://github.com/adarsh-jaiss/mailify"
+    description: "A CLI tool for email validation and server information"
+    license: MIT
+
+    # Persist data between runs
+    persist:
+      - "data"
+      - "config.yml"
