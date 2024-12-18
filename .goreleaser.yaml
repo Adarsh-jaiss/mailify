@@ -19,7 +19,7 @@ before:
 builds:
   - env:
       - CGO_ENABLED=0
-    main: ./cmd/mailify/main.go
+    main: ./cli/main.go
     binary: mailify
     goos:
       - linux
