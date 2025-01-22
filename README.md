@@ -4,12 +4,6 @@ Mailify is a Go package for validating email addresses by checking their format,
 
 ## CLI 
 
-You can use this as a cli tool on your local machine by installing the mailify cli tool
-
-```bash
-go install github.com/yourusername/mailify-cli@latest
-```
-
 For more details, checkout [CLI DOCS](https://github.com/Adarsh-jaiss/mailify/blob/main/cli/README.md)
 
 
